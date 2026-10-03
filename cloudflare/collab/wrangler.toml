@@ -1,0 +1,13 @@
+name = "excalidraw-collab"
+main = "src/index.ts"
+compatibility_date = "2026-10-03"
+
+[durable_objects]
+bindings = [
+  { name = "ENGINE_ACTOR", class_name = "EngineActor" },
+  { name = "SOCKET_ACTOR", class_name = "SocketActor" }
+]
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["EngineActor", "SocketActor"]
